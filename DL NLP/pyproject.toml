@@ -1,0 +1,80 @@
+[project]
+name = "dl_nlp_course"
+version = "0.0.1"
+description = "DL NLP Course"
+authors = [
+    { name = "Sergey Yurpalov", email = "" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "corus>=0.10.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.1",
+    "natasha>=1.6.0",
+    "numpy>=2.2.3",
+    "pandas>=2.2.3",
+    "polars>=1.17.1",
+    "pyarrow>=19.0.1",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.21.1",
+    "mypy>=1.6.1",
+    "flake8>=6.1.0",
+    "tox>=4.11.3",
+    "flake8-pyproject>=1.2.3",
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=dl_nlp_course"
+testpaths = ["tests"]
+markers = ["skip_tox"]
+
+[tool.coverage.run]
+omit = [
+    "*/enums/*",
+    "*/entities/*",
+    "*/custom_typing/*",
+    "__init__.py"
+]
+
+[tool.coverage.report]
+exclude_also = [
+    "def __repr__",
+    "def __str__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "@(abc\\.)?abstractmethod"
+]
+ignore_errors = true
+
+[tool.mypy]
+mypy_path = "dl_nlp_course"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+
+[tool.flake8]
+ignore = ['E231', 'E241']
+per-file-ignores = [
+    '__init__.py:F401',
+]
+max-line-length = 120
+count = true
