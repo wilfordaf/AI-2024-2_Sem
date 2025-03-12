@@ -165,3 +165,4 @@ docker/**/*
 !docker/init.sh
 *.parquet
 *.gz
+*.pickle
