@@ -5,18 +5,21 @@ description = "DL NLP Course"
 authors = [
     { name = "Sergey Yurpalov", email = "" }
 ]
-requires-python = ">=3.12"
+requires-python = "==3.10.*"
 dependencies = [
     "corus>=0.10.0",
+    "gensim>=4.3.3",
     "jupyter>=1.1.1",
     "matplotlib>=3.10.1",
     "natasha>=1.6.0",
-    "numpy>=2.2.3",
+    "navec>=0.10.0",
+    "numpy==1.26.4",
     "pandas>=2.2.3",
     "polars>=1.17.1",
     "pyarrow>=19.0.1",
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
+    "tqdm>=4.67.1",
 ]
 
 [build-system]
