@@ -166,3 +166,6 @@ docker/**/*
 *.parquet
 *.gz
 *.pickle
+/DL NLP/data/hw_2
+/DL NLP/models
+*.txt
