@@ -5,16 +5,17 @@ description = "DL NLP Course"
 authors = [
     { name = "Sergey Yurpalov", email = "" }
 ]
-requires-python = ">=3.12"
+requires-python = "==3.10.*"
 dependencies = [
     "corus>=0.10.0",
     "ipykernel>=6.29.5",
+    "gensim>=4.3.3",
     "jupyter>=1.1.1",
     "matplotlib>=3.10.1",
     "natasha>=1.6.0",
     "navec>=0.10.0",
     "nltk>=3.9.1",
-    "numpy>=2.2.3",
+    "numpy==1.26.4",
     "pandas>=2.2.3",
     "polars>=1.17.1",
     "pyarrow>=19.0.1",
@@ -23,6 +24,7 @@ dependencies = [
     "subword-nmt>=0.3.8",
     "torch>=2.6.0",
     "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
 ]
 
 [build-system]
