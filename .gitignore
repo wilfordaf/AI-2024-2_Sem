@@ -169,3 +169,7 @@ docker/**/*
 /DL NLP/data/hw_2
 /DL NLP/models
 *.txt
+/DL NLP/data/hw_4
+/DL NLP/data
+/DL NLP/data/processed
+*.en
